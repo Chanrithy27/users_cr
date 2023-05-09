@@ -8,27 +8,29 @@
     <title>Users</title>
 </head>
 <body>
-    <h1>All Users</h1>
-    <table>
-        <thead>
-            <tr>
-                <th>First Name</th>
-                <th>Last Name</th>
-                <th>Email</th>
-                <th>Created At</th>
-            </tr>
-            <tbody>
-                {% for user in users %}
-                <tr>
-                    <td>{{user["first_name"]}}</td>
-                    <td>{{user['last_name']}}</td>
-                    <td>{{user['email']}}</td>
-                    <td>{{user['created_at']}}</td>
+    <div class="m-5 p-3 border border-5 border-dark text-light text-center bg-secondary">
+        <h1 class="text-center">All Users</h1>
+        <table class="border border-2 border-dark table table-bordered text-light">
+            <thead class="">
+                <tr class="">
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>Email</th>
+                    <th>Created At</th>
                 </tr>
-                {% endfor %}
-            </tbody>
+                <tbody>
+                    {% for user in users %}
+                    <tr>
+                        <td>{{user["first_name"]}}</td>
+                        <td>{{user['last_name']}}</td>
+                        <td>{{user['email']}}</td>
+                        <td>{{user['created_at']}}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
         </thead>
-    </table>
-    <a href="/new_user">Add a New user</a>
+        </table>
+        <a href="/new_user">Add a New user</a>
+    </div>
 </body>
 </html>

@@ -17,6 +17,11 @@ def users():
 def show_users():
     return render_template('new_user.html')
 
+@app.route('/create_user', methods = ['POST'])
+def create():
+    User.save(request.form)
+    return redirect('/users')
+
 @app.route('/home')
 def home():
     return redirect('/users')
