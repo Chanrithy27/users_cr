@@ -1,1 +1,3 @@
-SELECT * FROM users
+SELECT * FROM users;
+SET SQL_SAFE_UPDATES = 0;
+DELETE FROM users;
